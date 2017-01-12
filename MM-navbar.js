@@ -11,15 +11,19 @@ Module.register("MM-navbar",{
 	},
 	notificationReceived: function(notification, payload, sender){
                 if (notification === "CALENDAR"){
-                        var calendarbutton = document.getElementById('calendar-$
+                        var calendarbutton = document.getElementById('calendar-button');
                         calendarbutton.click();
                 }
-		if (notification === "NEWSFEED"){
+                if (notification === "NFL"){
+                        var nflbutton = document.getElementById('nfl-button');
+                        nflbutton.click();
+                }
+                if (notification === "NEWSFEED"){
                         var newsbutton = document.getElementById('news-button');
                         newsbutton.click();
                 }
                 if (notification === "WEATHER"){
-                        var weatherbutton = document.getElementById('weather-bu$
+                        var weatherbutton = document.getElementById('weather-button');
                         weatherbutton.click();
                 }
         },
