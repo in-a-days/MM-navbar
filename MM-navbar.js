@@ -10,13 +10,20 @@ Module.register("MM-navbar",{
 		return ["weather-icons.css", "navbar.css", "font-awesome.css"];
 	},
 	notificationReceived: function(notification, payload, sender){
-		if (notification === 'DOM_OBJECTS_CREATED'){
-			MM.getModules().exceptModule(this).exceptWithClass('clock').enumerate(function(module){
-				module.hide(1000, function(){
-				});
-			});
-		}
-	},
+                if (notification === "CALENDAR"){
+                        var calendarbutton = document.getElementById('calendar-$
+                        calendarbutton.click();
+                }
+		if (notification === "NEWSFEED"){
+                        var newsbutton = document.getElementById('news-button');
+                        newsbutton.click();
+                }
+                if (notification === "WEATHER"){
+                        var weatherbutton = document.getElementById('weather-bu$
+                        weatherbutton.click();
+                }
+        },
+
 	getDom: function(){
 
 		var wrapper = document.createElement("div");
