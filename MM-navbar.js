@@ -40,10 +40,13 @@ Module.register("MM-navbar",{
 		var calendarbutton = document.createElement("span");
 		var newsbutton = document.createElement("span");
 
-		wrapper.className = "center";
-		weatherbutton.className = "wi wi-day-rain-mix navbar";
-		calendarbutton.className = "fa fa-calendar navbar";	
-		newsbutton.className = "fa fa-newspaper-o navbar";		
+            	wrapper.className = "center";
+            	weatherbutton.className = "wi wi-day-rain-mix navbar";
+            	weatherbutton.id = 'weather-button';
+            	calendarbutton.className = "fa fa-calendar navbar";
+            	calendarbutton.id = 'calendar-button';
+            	newsbutton.className = "fa fa-newspaper-o navbar";
+            	newsbutton.id = 'news-button';
 
 		var forecast = MM.getModules().withClass('weatherforecast');
 		var weather = MM.getModules().withClass('currentweather');
